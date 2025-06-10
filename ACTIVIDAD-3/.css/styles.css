@@ -1,0 +1,170 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    max-width: 700px;
+    padding: 20px;
+    margin: 0 auto;
+    background:linear-gradient(135deg, #582bfc 0%, #0b006b 100%);
+    min-height: 100vh;
+}
+
+.container{
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0 , 0 , 0, 0.2);
+}
+
+.Progreso-Formulario{
+    width: 100%;
+    height: 6px;
+    background-color:antiquewhite;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.barra-progreso{
+    height: 100%;
+    background:linear-gradient(90deg, #0b006b, #582bfc);
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 3px;
+}
+
+.form-group{
+    margin-bottom: 25px;
+    position: relative;
+}
+
+h1{
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px ;
+    font-size: 2rem;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: o.95rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid #e1e5e9;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Estados de Validacion visual */
+input.valido,
+select.valido,
+textarea.valido {
+    border-color: #28a745;
+    background-color: #f8fff9;
+}
+
+input.invalido,
+select.invalido,
+textarea.invalido {
+    border-color: #d80c0c;
+    background-color: #f8fff9;
+}
+
+/*Mensajes de Error*/
+.Mensaje-Error{
+    color: #d80c0c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+/*Mensaje de Exito*/
+.mensaje.Exito{
+    color: #28a745;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+@keyframes slideDown{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Indicador de Fortaleza Contraseña*/
+
+.password-strength{
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.strength-weak{
+    background-color: #d80c0c;
+    width: 25%;
+}
+
+.strength-medium{
+    background-color: #ffc107;
+    width: 50%;
+}
+
+.strength-strong{
+    background-color: #28a745;
+    width: 75%;
+}
+
+.strength-very-strong{
+    background-color: #20d64a;
+    width: 100%;
+}
+
+/*Boton*/
+
+button{
+    background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-size: 600;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled){
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234 , 0.4);
+}
+
+button:disabled{
+    background: #ccc;
+    cursor:not-allowed;
+}
+
+.contador-caracteres{
+    font-size: 0.8rem;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+}
